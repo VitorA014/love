@@ -1,0 +1,19 @@
+
+    body {
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .textop {
+        margin-bottom: 120px;
+    }
+    #btn-nao {
+        margin-top: 120px;
+      position: absolute;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }

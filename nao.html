@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você me ama?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://media.istockphoto.com/id/543347592/pt/vetorial/why-god-why-emoticon.jpg?s=612x612&w=0&k=20&c=Sk0YAGZSLs9pcXZYx7ssB2MVM7ZcPT9d2evMZ7cC-FQ=');
+      background-size: auto;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    
+    }
+
+    .btns {
+      display: flex;
+      margin-left: 20%;
+      margin-right: 20%;
+      gap: 20px;
+      z-index: 1;
+    }
+
+    #btn-sim, #btn-nao {
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      z-index: 3;
+    }
+
+    #btn-sim {
+      background-color: #28a745;
+    }
+
+    .content-wrapper {
+    text-align: center;
+    position: relative;
+    }
+
+    #btn-nao {
+      background-color: #dc3545;
+      position: absolute;
+    }
+
+    #btn-sim:hover {
+      transform: scale(1.05);
+    }
+
+    .btn{
+        margin: 0;
+        padding: 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="content-wrapper">
+      <h1>Você pelo menos me ama? 😭</h1>
+  
+      <div class="btns">
+        <div>
+            <button id="btn-sim" class="btn" onclick="window.location.href='sim.html'">SIM!! 😍</button>
+        </div>
+        <div>
+            <button id="btn-nao" class="btn">NÃO! 🤬</button>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      const btnNao = document.getElementById("btn-nao");
+  
+      function moverBotao() {
+        const larguraJanela = window.innerWidth;
+        
+        const alturaJanela = window.innerHeight;
+    
+  
+        const maxX = larguraJanela *0.5;
+        const maxY = alturaJanela *0.5;
+        console.log(maxX)
+        console.log(maxY)
+  
+        const novaPosX = Math.random() * maxX;
+        const novaPosY = Math.random() * maxY;
+        console.log(novaPosX)
+        console.log(novaPosY)
+
+        btnNao.style.left = `${novaPosX}px`;
+        btnNao.style.top = `${novaPosY}px`;
+      }
+  
+      btnNao.addEventListener("touchstart", moverBotao);
+      btnNao.addEventListener("mouseover", moverBotao);
+    </script>
+  </body>
+  
+</body>
+</html>
